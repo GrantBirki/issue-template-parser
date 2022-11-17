@@ -17,7 +17,12 @@ export async function parse(body) {
     // Loop over the list of sections
     for (const section of issue_body_sections_list) {
         // Split out the issue body sections
-        let splitString = "\n"
+        var splitString
+        if (process.env.CI === 'true') {
+            splitString = "\\n"
+        } else {
+            splitString = "\n"
+        }
 
         let issue_body = section.split(splitString)
         core.debug(issue_body)
