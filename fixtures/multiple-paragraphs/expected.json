@@ -1,4 +1,4 @@
 {
-  "my_textarea_input": "1st paragraph\n\n2nd paragraph",
-  "another_textarea_input": "1st paragraph\r\n2nd paragraph"
+  "my_textarea_input": "1st paragraph\r\n\n\r\n\n2nd paragraph",
+  "another_textarea_input": "1st paragraph\r\n\n2nd paragraph"
 }
