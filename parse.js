@@ -17,14 +17,8 @@ export async function parse(body) {
     // Loop over the list of sections
     for (const section of issue_body_sections_list) {
         // Split out the issue body sections
-        var splitString
-        if (process.env.CI === 'true') {
-            splitString = "\\n"
-        } else {
-            splitString = "\n"
-        }
-
-        let issue_body = section.split(splitString)
+        let issue_body = section.split(/\r?\n/)
+        core.debug("Issue Section: ")
         core.debug(issue_body)
 
         // make the key lowercase and snake case

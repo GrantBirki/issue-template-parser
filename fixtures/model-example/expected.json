@@ -2,7 +2,7 @@
   "model_name": "my cool molecule",
   "model_description": "This is a prediction for a super cool molecule",
   "ersilia_id": "eos11aa",
-  "publication": "The following link is just an example:\r\n\n\r\n\nwww.example.com",
+  "publication": "The following link is just an example:\n\n\n\nwww.example.com",
   "code": null,
   "license": null
 }
