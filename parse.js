@@ -17,12 +17,7 @@ export async function parse(body) {
     // Loop over the list of sections
     for (const section of issue_body_sections_list) {
         // Split out the issue body sections
-        var splitString
-        if (process.env.CI === 'true') {
-            splitString = "\\r\\n\\r\\n"
-        } else {
-            splitString = "\r\n\r\n"
-        }
+        let splitString = "\n"
 
         let issue_body = section.split(splitString)
         core.debug(issue_body)
@@ -33,7 +28,7 @@ export async function parse(body) {
         // Remove the first element of the list, which is the section header
         issue_body.shift()
         // Join the list back together with newlines
-        issue_body = issue_body.join("\n\n")
+        issue_body = issue_body.slice(1).join("\n\n")
 
         // get the value from the body as well
         let value = issue_body.trim()
