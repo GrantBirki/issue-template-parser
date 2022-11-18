@@ -17,7 +17,7 @@ export async function parse(body) {
     // Loop over the list of sections
     for (const section of issue_body_sections_list) {
         // Split out the issue body sections
-        let issue_body = section.split(/\r?\n/)
+        let issue_body = section.split(/\r?\n|\n/)
         core.debug("Issue Section: ")
         core.debug(issue_body)
 
