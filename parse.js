@@ -20,7 +20,7 @@ export async function parse(body) {
     // Loop over the list of sections
     for (const section of issue_body_sections_list) {
         // Split out the issue body sections
-        core.debug(section)
+        core.debug("This is updating")
         let issue_body = section.split("\n")
         core.debug("Issue Section: ")
         core.debug(issue_body)
