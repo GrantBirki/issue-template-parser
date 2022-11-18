@@ -6,6 +6,9 @@ import * as core from '@actions/core'
 export async function parse(body) {
     var parsed_issue_body_dict = {}
 
+    body = String(body)
+    core.debug(body)
+
     // Split the body up by the section headers
     const issue_body_sections_list = body.split("###")
 
@@ -17,7 +20,7 @@ export async function parse(body) {
     // Loop over the list of sections
     for (const section of issue_body_sections_list) {
         // Split out the issue body sections
-        let issue_body = section.split(/\r?\n|\n/)
+        let issue_body = section.split(/\r?\n/)
         core.debug("Issue Section: ")
         core.debug(issue_body)
 
