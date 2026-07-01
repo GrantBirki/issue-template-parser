@@ -80,7 +80,7 @@
     "verbose": true
   },
   "dependencies": {
-    "@actions/core": "^1.11.1"
+    "@actions/core": "^3.0.1"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.25.1",
